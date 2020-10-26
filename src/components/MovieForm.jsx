@@ -31,7 +31,7 @@ class MovieForm extends Component {
       .catch((e) => {
         console.error(e);
         alert(
-          `Error when the movie was added : ${e.message} Please fill in all the fields!`
+          `Error when the movie was added : ${e.message} please fill in all the fields!`
         );
       });
   }
@@ -51,6 +51,7 @@ class MovieForm extends Component {
                 name="title"
                 onChange={this.onChange}
                 value={this.state.lastname}
+                required
               />
             </div>
             <div className="form-data">
@@ -61,6 +62,7 @@ class MovieForm extends Component {
                 name="poster"
                 onChange={this.onChange}
                 value={this.state.poster}
+                required
               />
             </div>
             <div className="form-data">
@@ -71,6 +73,7 @@ class MovieForm extends Component {
                 name="comment"
                 onChange={this.onChange}
                 value={this.state.comment}
+                required
               />
             </div>
             <hr />
